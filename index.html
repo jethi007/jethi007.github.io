@@ -844,7 +844,28 @@ body .grecaptcha-badge{display:none !important;}
                   })(window,document,'script','dataLayer','GTM-5B3XK6C');
                 }, 100);
               });
-              </script><script defer>
+              </script>
+              <script type='text/javascript'>
+                function initEmbeddedMessaging() {
+                  try {
+                    embeddedservice_bootstrap.settings.language = 'en_US'; // For example, enter 'en' or 'en-US'
+
+                    embeddedservice_bootstrap.init(
+                      '00D5t0000008hlj',
+                      'Al_Mosafer_Generic_Web_Chat',
+                      'https://altayyargroup--uat.sandbox.my.site.com/ESWAlMosaferGenericWeb1706170051810',
+                      {
+                        scrt2URL: 'https://altayyargroup--uat.sandbox.my.salesforce-scrt.com'
+                      }
+                    );
+                  } catch (err) {
+                    console.error('Error loading Embedded Messaging: ', err);
+                  }
+                };
+              </script>
+              <script type='text/javascript' src='https://altayyargroup--uat.sandbox.my.site.com/ESWAlMosaferGenericWeb1706170051810/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'>
+              </script>
+              <script defer>
                (function(h,o,u,n,d) {
                   h=h[d]=h[d]||{q:[],onReady:function(c){h.q.push(c)}}
                   d=o.createElement(u);d.async=1;d.src=n
