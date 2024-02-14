@@ -82,11 +82,12 @@
 <script type='text/javascript'>
     // catch on document...
     window.addEventListener("load-chat", function(event) { // (1)
-      alert("Hello from load-chat"); // Hello from VF
+      console.log("Hello from load-chat"); // Hello from VF
     });
     // catch on document...
     window.addEventListener("agent-not-found", function(event) { // (1)
-      alert("Hello from agent-not-found"); // Hello from VF
+      console.log("Hello from agent-not-found"); // Hello from VF
+      initEmbeddedMessaging();
     });
 </script>
 <script type='text/javascript'>
@@ -122,8 +123,8 @@
     }
   };
 </script>
-<script type='text/javascript' src='https://altayyargroup--coedev4.sandbox.my.site.com/ESWMessagingforWeb1704367156652/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
-<script type='text/javascript' src='https://altayyargroup--uat.sandbox.my.site.com/ESWAlMosaferGenericWeb1706170051810/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'>
+<!--<script type='text/javascript' src='https://altayyargroup--coedev4.sandbox.my.site.com/ESWMessagingforWeb1704367156652/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>-->
+<!--<script type='text/javascript' src='https://altayyargroup--uat.sandbox.my.site.com/ESWAlMosaferGenericWeb1706170051810/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'>-->
 </script>
 <iframe src="https://altayyargroup--coedev4.sandbox.my.salesforce-sites.com/checkavailability"></iframe>
 </body>
