@@ -131,7 +131,7 @@ let request = new Request(url, {
 console.log('dawd---?'+request.mode);
 fetch(request)
   .then((response) => {
-      console.log( response.json());
+      console.log( 'response--> '+response);
     })
   .catch(error => {
     console.error('Error:', error);
