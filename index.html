@@ -123,13 +123,13 @@ var apiVersion = '54';
 let request = new Request(url, {
   method: 'GET',
   mode:'no-cors',
-  headers: new Headers({
+  headers: {
     'X-LIVEAGENT-API-VERSION': apiVersion,
     'Content-Type': 'application/json'
-  })
+  }
 });
 console.log('dawd---?'+request.mode);
-console.log('dawd---?'+request.headers);
+console.log('headers---?'+request.headers);
 fetch(request)
   .then((response) => {
       console.log( 'response--> '+response);
