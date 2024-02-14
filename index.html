@@ -81,11 +81,11 @@
 <div style="background-color:#f1f1f1;text-align:center;padding:10px;margin-top:7px;font-size:12px;"> This is a Test website to test out Web chat.</div>
 <script type='text/javascript'>
     // catch on document...
-    window.addEventListener("load-chat", function(event) { // (1)
+    window.addEventListener("load-chat", event => { // (1)
       console.log("Hello from load-chat"); // Hello from VF
     });
     // catch on document...
-    window.addEventListener("agent-not-found", function(event) { // (1)
+    window.addEventListener("agent-not-found", event => { // (1)
       console.log("Hello from agent-not-found"); // Hello from VF
       initEmbeddedMessaging();
     });
