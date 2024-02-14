@@ -115,5 +115,27 @@
 <script type='text/javascript' src='https://altayyargroup--coedev4.sandbox.my.site.com/ESWMessagingforWeb1704367156652/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
 <script type='text/javascript' src='https://altayyargroup--uat.sandbox.my.site.com/ESWAlMosaferGenericWeb1706170051810/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'>
 </script>
+<script>
+const url = 'https://d.la3-c1cs-fra.salesforceliveagent.com/chat/rest/Visitor/Availability?org_id=00D7Z0000005NRj&deployment_id=5720N000000bqT6&Availability.ids=5730N000000bqDl';
+
+var apiVersion = '54';
+
+let request = new Request(url, {
+  method: 'GET',
+  mode:'no-cors',
+  headers: new Headers({
+    'X-LIVEAGENT-API-VERSION': apiVersion,
+    'Content-Type': 'application/json'
+  })
+});
+console.log('dawd---?'+request.mode);
+fetch(request)
+  .then((response) => {
+      console.log( response.json());
+    })
+  .catch(error => {
+    console.error('Error:', error);
+  });
+</script>
 </body>
 </html>
