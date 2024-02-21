@@ -79,22 +79,20 @@
 
 
 <div style="background-color:#f1f1f1;text-align:center;padding:10px;margin-top:7px;font-size:12px;"> This is a Test website to test out Web chat.</div>
-<script type='text/javascript'>
-    // catch on document...
-    window.addEventListener("load-chat", event => { // (1)
-      console.log("Hello from load-chat"); // Hello from VF
-      initEmbeddedMessaging();
-    });
-    // catch on document...
-    window.addEventListener("agent-not-found", event => { // (1)
-      console.log("Hello from agent-not-found"); // Hello from VF
+<input type="hidden" id="productName" name="productName" value="Flight" />
+<input type="hidden" id="language" name="language" value="English" />
 
-    });
+<script type='text/javascript'>
+
     window.addEventListener('message', function(event) {
-      console.log('Something not-found');
+
     if(event.data.event_id === 'agent-not-found-post'){
         console.log('Post Message agent-not-found' + event.data.payload);
+    } else if(event.data.event_id === 'load-chat'){
+      console.log("Hello from load-chat"+ event.data.payload); // Hello from VF
+      initEmbeddedMessaging();
     }
+
 });
 </script>
 <script type='text/javascript'>
