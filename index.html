@@ -91,6 +91,7 @@
 
     });
     window.addEventListener('agent-not-found-cors', function(event) {
+      console.log('Something not-found');
     if(event.data.event_id === 'agent-not-found-post'){
         console.log('Post Message agent-not-found');
     }
