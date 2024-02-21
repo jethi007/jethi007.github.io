@@ -90,6 +90,11 @@
       console.log("Hello from agent-not-found"); // Hello from VF
 
     });
+    window.addEventListener('agent-not-found-cors', function(event) {
+    if(event.data.event_id === 'agent-not-found-post'){
+        console.log('Post Message agent-not-found');
+    }
+});
 </script>
 <script type='text/javascript'>
   function initEmbeddedMessaging() {
