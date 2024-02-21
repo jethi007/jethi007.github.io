@@ -93,7 +93,7 @@
     window.addEventListener('message', function(event) {
       console.log('Something not-found');
     if(event.data.event_id === 'agent-not-found-post'){
-        console.log('Post Message agent-not-found');
+        console.log('Post Message agent-not-found' + event.data.payload);
     }
 });
 </script>
