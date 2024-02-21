@@ -104,8 +104,10 @@
       console.log("Received the onEmbeddedMessagingReady event…");
 
       // Send data to Salesforce
-      embeddedservice_bootstrap.prechatAPI.setHiddenPrechatFields({"Product" : "Flight",
-      "Language" : "English"});
+      var product = document.getElementById('productName').value;
+      var language = document.getElementById('language').value;
+      embeddedservice_bootstrap.prechatAPI.setHiddenPrechatFields({"Product" : product,
+      "Language" : language});
 
       // Remove any items from the previous list that you don't want to send
       //embeddedservice_bootstrap.prechatAPI.removeHiddenPrechatFields(["Customer_ID"]);
