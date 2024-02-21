@@ -81,15 +81,7 @@
 <div style="background-color:#f1f1f1;text-align:center;padding:10px;margin-top:7px;font-size:12px;"> This is a Test website to test out Web chat.</div>
 <input type="hidden" id="productName" name="productName" value="Flight" />
 <input type="hidden" id="language" name="language" value="English" />
-<script>
-    let myIframe = document.getElementById("myIframe");
-    let product = document.getElementById('productName').value;
-    let language = document.getElementById('language').value;
-    let url_string = "https://altayyargroup--coedev4.sandbox.my.salesforce-sites.com/checkavailability";
-    let adsURL = url_string + '?product='+product+'&language='+language;
-    console.log(adsURL);
-    myIframe.src = adsURL;
-</script>
+
 <script type='text/javascript'>
 
     window.addEventListener('message', function(event) {
@@ -142,5 +134,14 @@
 <!--<script type='text/javascript' src='https://altayyargroup--uat.sandbox.my.site.com/ESWAlMosaferGenericWeb1706170051810/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'>-->
 </script>
 <iframe id ='myIframe' src="https://altayyargroup--coedev4.sandbox.my.salesforce-sites.com/checkavailability" style="height:0px;width:0px;border:none;" title="Iframe Test"></iframe>
+<script>
+    let myIframe = document.getElementById("myIframe");
+    let product = document.getElementById('productName').value;
+    let language = document.getElementById('language').value;
+    let url_string = "https://altayyargroup--coedev4.sandbox.my.salesforce-sites.com/checkavailability";
+    let adsURL = url_string + '?product='+product+'&language='+language;
+    console.log(adsURL);
+    myIframe.src = adsURL;
+</script>
 </body>
 </html>
