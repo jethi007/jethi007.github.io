@@ -130,21 +130,23 @@
     }
   };
 </script>
-<script type='text/javascript' src='https://altayyargroup--coedev4.sandbox.my.site.com/ESWMessagingforWeb1704367156652/assets/js/bootstrap.min.js'></script>
+<script type='text/javascript' src='https://altayyargroup--coedev4.sandbox.my.site.com/ESWMessagingforWeb1704367156652/assets/js/bootstrap.min.js' onload='loadAvailabilityFrame()'></script>
 <!--<script type='text/javascript' src='https://altayyargroup--uat.sandbox.my.site.com/ESWAlMosaferGenericWeb1706170051810/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'>
 </script>-->
 
 <iframe id ='myIframe' src="https://altayyargroup--coedev4.sandbox.my.salesforce-sites.com/checkavailability" style="height:0px;width:0px;border:none;" title="Iframe Test"></iframe>
 
 <script>
-  //the script will update the query paraneter for 
-  let myIframe = document.getElementById("myIframe");
-  let product = document.getElementById('productName').value;
-  let language = document.getElementById('language').value;
-  let url_string = "https://altayyargroup--coedev4.sandbox.my.salesforce-sites.com/checkavailability";
-  let adsURL = url_string + '?product='+product+'&language='+language;
-  console.log(adsURL);
-  myIframe.src = adsURL;
+  function loadAvailabilityFrame() {
+    //the script will update the query paraneter for 
+    let myIframe = document.getElementById("myIframe");
+    let product = document.getElementById('productName').value;
+    let language = document.getElementById('language').value;
+    let url_string = "https://altayyargroup--coedev4.sandbox.my.salesforce-sites.com/checkavailability";
+    let adsURL = url_string + '?product='+product+'&language='+language;
+    console.log(adsURL);
+    myIframe.src = adsURL;
+  }
 </script>
 </body>
 </html>
